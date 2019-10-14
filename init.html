@@ -1,0 +1,15 @@
+<div ng-app="something" ng-controller="somecontroller as vm">
+   <div class="row">
+    <div class="entity" ng-repeat="item in vm.items track by $index">
+      <some-item logs="vm.logs" 
+        another-item data-hover-text="{{'User is hovering over element at index: ' + $index}}"         
+        data-click-text="{{'User clicked on element at index: ' + $index}}"
+        ></some-item>
+    </div>
+  </div>
+
+  <button ng-click="vm.addNewItem()">add new</button>
+  <button ng-click="vm.showLogs()">show global logs</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js"></script>
